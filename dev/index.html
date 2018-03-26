@@ -1,60 +1,272 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Document</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="description" content="Page description">
-    <meta name="keywords" content="page, keywords">
-    <meta name="theme-color" content="#000000">
-    <meta name="copyright" content="Author">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
-    <meta name="apple-mobile-web-app-title" content="Application Name">
-    <meta name="msapplication-TileImage" content="img/favicons/144x144.png">
-    <meta name="msapplication-TileColor" content="#000000">
-    <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="css/style.min.css">
-    <link rel="shortcut icon" href="img/favicons/64x64.png" type="image/png">
-    <link rel="icon" href="img/favicons/152x152.png" type="image/png" sizes="152x152">
-    <link rel="icon" href="img/favicons/256x256.png" type="image/png" sizes="256x256">
-    <link rel="icon" href="img/favicons/512x512.png" type="image/png" sizes="512x512">
-    <link rel="apple-touch-icon" href="img/favicons/152x152.png" sizes="152x152">
-    <link rel="apple-touch-icon" href="img/favicons/256x256.png" sizes="256x256">
-    <link rel="apple-touch-icon" href="img/favicons/512x512.png" sizes="512x512">
-    <link rel="manifest" href="manifest.json">
+    <style>
+      body {
+      	background-color: #f6f6f6;
+      	font-family: sans-serif;
+      	-webkit-font-smoothing: antialiased;
+      	font-size: 14px;
+      	line-height: 1.4;
+      	margin: 0;
+      	padding: 0;
+      	-ms-text-size-adjust: 100%;
+      	-webkit-text-size-adjust: 100%;
+      }
+      
+      table {
+      border-collapse: separate;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+      width: 100%; }
+      
+      table td {
+      	font-family: sans-serif;
+      	font-size: 14px;
+      	vertical-align: top; }
+      
+      .container {
+      	display: block;
+      	Margin: 0 auto !important;
+      	/* makes it centered */
+      	max-width: 700px;
+      	padding: 10px;
+      	width: 700px; }
+      
+      .content {
+      	box-sizing: border-box;
+      	display: block;
+      	Margin: 0 auto;
+      	max-width: 680px;
+      	padding: 10px; }
+      
+      .main {
+      	background: #ffffff;
+      	border-radius: 3px;
+      	width: 100%; }
+      
+      .wrapper {
+      	box-sizing: border-box;
+      	padding: 20px; }
+      
+      .content-block {
+      padding-bottom: 10px;
+      padding-top: 10px;
+      }
+      
+      .footer {
+      clear: both;
+      Margin-top: 10px;
+      text-align: center;
+      width: 100%; }
+      .footer td,
+      .footer p,
+      .footer span,
+      .footer a {
+      	color: #999999;
+      	font-size: 12px;
+      	text-align: center; }
+      
+      a {
+      	color: #3498db;
+      	text-decoration: underline; }
+      
+      .title {
+      margin-bottom: 20px;
+      color: #222;
+      font-weight: 400;
+      font-size: 31px;
+      }
+      
+      .title_desc {
+      	font-size: 20px;
+      	line-height: 1.5;
+      	font-weight: 400;
+      	color: #222;
+      }
+      
+      .title_text {
+      	font-size: 15px;
+      	font-weight: normal;
+      	line-height: 1.5;
+      	color: #666;
+      	margin-bottom: 20px;
+      }
+    </style>
   </head>
   <body>
-    <section>
-      <div class="uk-container">
-        <div class="height uk-text-center uk-padding uk-flex uk-flex-middle uk-flex-center">
-          <div><img src="img/jpg/pug.jpg" alt="">
-            <h1>Gulp + Pug + Sass </h1>
-            <h2>This is include componet</h2>
-            <h3>this is mixins</h3><a class="uk-button uk-button-default" href="index.html">Ссылка href</a>
-                <button class="uk-button uk-button-default" type="submit">Кнопка Submit</button>
-            <form class="uk-margin">
-              <fieldset class="uk-fieldset">
-                    <div class="uk-margin">
-                      <input class="uk-input" id="myInputId" type="text" placeholder="Input">
-                    </div>
-                    <div class="uk-margin">
-                      <textarea class="uk-textarea" id="myTextareaId" rows="10" placeholder="Textarea"></textarea>
-                    </div>
-                    <div class="uk-margin">
-                      <select class="uk-select" id="mySelectId">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                      </select>
-                    </div>
-              </fieldset>
-            </form>
+    <table class="body" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td>&nbsp;</td>
+        <td class="container">
+          <div class="content">
+            <h1 class="title">Бриф на разработку сайта.</h1>
+            <table class="main">
+              <tr>
+                <td class="wrapper">
+                  <table border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td>
+                        <p class="title_desc">Пожалуйста, заполните бриф максимально подробно. Это позволит нам определить конкретные сроки и стоимость разработки.</p>
+                        <p class="title_text">Распечатайте бриф. Срок оценки брифа 2-3 рабочих дня.</p>
+                        <table class="forms" border="0" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <h5 class="title_desc">Сфера деятельности компании:</h5>
+                                <p name="description"></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <h5 class="title_desc">Характеристики основных услуг:</h5>
+                                <p name="shareholders"></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <h5 class="title_desc">География реализация товаров, услуг:</h5>
+                                <p name="geography"></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <h5 class="title_desc">Кто является основным потребителем (целевая аудитория сайта):</h5>
+                                <p name="auditoria"></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <h5 class="title_desc">Конкуренты, их веб-ресурсы:</h5>
+                                <p name="konkurenti"></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <h5 class="title_desc">Задачи, которые должен решать сайт:</h5>
+                                <p name="task"></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <h5 class="title_desc">Тип сайта:</h5>
+                                <p name="selectedType">Или name = "typeAnother"</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <h5 class="title_desc">Основные разделы сайта (описать точную структуру разделов сайта):</h5>
+                                <p name="selectedChapter">Или name = "chapterAnother"</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <h5 class="title_desc">Частота предполагаемых обновлений сайта:</h5>
+                                <p name="siblings"></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <h5 class="title_desc">Языковые версии сайта:</h5>
+                                <p name="selectedLanguage"></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <h5 class="title_desc">Контент сайта (На примере сайта для публикации новостей. На сайте будут новости, которые будут состоять из заголовка и описания)</h5>
+                                <p name="content"></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <h5 class="title_desc">Стиль сайта:</h5>
+                                <p name="style">Или name = "styleAnother"</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <h5 class="title_desc">Впечатление, которое должен произвести сайт на пользователя:</h5>
+                                <p name="impression"></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <h5 class="title_desc">Какое основное сообщение необходимо довести до сознания потребителя (призыв к действию):</h5>
+                                <p name="actionCall"></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <h5 class="title_desc">Что вы хотите, чтобы пользователь в результате посещения сайта</h5>
+                                <p name="see">Увидел:</p>
+                                <p name="do">Сделал:</p>
+                                <p name="feel">Почувствовал:</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <h5 class="title_desc">Цветовая гамма (Не нужно заполнять, если есть брендбук)</h5>
+                                <p name="color"></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <h5 class="title_desc">Компоненты сайта:</h5>
+                                <p name="selectedComponent">Или name = "componentAnother"</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <h5 class="title_desc">Предусматривать ли место под баннерную рекламу:</h5>
+                                <p name="bannerSelection"></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <h5 class="title_desc">Предусматривать ли место для счетчиков посещений:</h5>
+                                <p name="counterSelection"></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <h5 class="title_desc">Срок исполнения заказа (сколько готов ждать заказчик):</h5>
+                                <p name="deadlineSelection"></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <h5 class="title_desc">Пользовательский сценарий:</h5>
+                                <p class="title_text">(Описать шаги, как посетители  будут взаимодействовать с приложением) Чем больше сценарий, тем лучше мы поймем видение клиента. </p>
+                                <p class="title_text">Ваш сценарий:</p>
+                                <p name="scene"></p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <h5 class="title_desc">Это ваш бриф на разработку сайта</h5>
+                      </td>
+                    </tr>
+                  </table>
+                  <div class="footer">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="content-block"><span class="apple-link">Компания Namba Soft. </span></td>
+                      </tr>
+                      <tr>
+                        <td class="content-block"></td><span class="apple-link">Вам не нравятся такие письма? &nbsp;<a href="https://media.giphy.com/media/3oEjI798qgG6UMhJm0/giphy.gif">Отписаться</a></span>
+                      </tr>
+                      <tr>
+                        <td class="content-block powered-by"> <span class="apple-link">Powered by &nbsp;</span><a href="http://htmlemail.io">HTMLemail.</a></td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+                <td>&nbsp;</td>
+              </tr>
+            </table>
           </div>
-        </div>
-      </div>
-    </section>
-    <script src="js/libs.min.js"></script>
-    <script src="js/common.min.js"></script>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>

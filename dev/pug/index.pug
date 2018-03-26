@@ -1,30 +1,222 @@
 doctype
 html(lang="ru")
 	head
-		include assets/_metas.pug
-		include assets/_links.pug
-		include mixin/mixins.pug
-	body
-		include assets/_header.pug
-		
-		section
-			.uk-container
-				.height.uk-text-center.uk-padding.uk-flex.uk-flex-middle.uk-flex-center
-					div
-						img(src="img/jpg/pug.jpg", alt="")
-						h1 Gulp + Pug + Sass 
-						include componets/item.pug
-						h3 this is mixins
-						+BDU('index.html','Ссылка href')
-						+BDS('Кнопка Submit')
-						form.uk-margin
-							fieldset.uk-fieldset
-								+FI('uk-input', 'myInputId', 'text', 'Input')
-								+FT('uk-textarea', 'myTextareaId', '10', 'Textarea')
-								+FS('uk-select', 'mySelectId')
+		style.
+			body {
+				background: #f6f6f6;
+				font-family: sans-serif;
+				-webkit-font-smoothing: antialiased;
+				font-size: 14px;
+				line-height: 1.4;
+				margin: 0;
+				padding: 0;
+				-ms-text-size-adjust: 100%;
+				-webkit-text-size-adjust: 100%;
+			}
 
+			table {
+			border-collapse: separate;
+			mso-table-lspace: 0pt;
+			mso-table-rspace: 0pt;
+			width: 100%; }
 
-		include assets/_footer.pug
-		include assets/_scripts.pug
-		
+			table td {
+				font-family: sans-serif;
+				font-size: 14px;
+				vertical-align: top; }
+
+			.container {
+				display: block;
+				Margin: 0 auto !important;
+				/* makes it centered */
+				max-width: 700px;
+				padding: 10px;
+				width: 700px; }
 			
+			.content {
+				box-sizing: border-box;
+				display: block;
+				Margin: 0 auto;
+				max-width: 680px;
+				padding: 10px; }
+			
+			.main {
+				background: #ffffff;
+				border-radius: 3px;
+				width: 100%; }
+			
+			.wrapper {
+				box-sizing: border-box;
+				padding: 20px; }
+
+			.content-block {
+			padding-bottom: 10px;
+			padding-top: 10px;
+			}
+
+			.footer {
+			clear: both;
+			Margin-top: 10px;
+			text-align: center;
+			width: 100%; }
+			.footer td,
+			.footer p,
+			.footer span,
+			.footer a {
+				color: #999999;
+				font-size: 12px;
+				text-align: center; }
+			
+			a {
+				color: #3498db;
+				text-decoration: underline; }
+
+			.title {
+			margin-bottom: 20px;
+			color: #222;
+			font-weight: 400;
+			font-size: 31px;
+			}
+
+			.title_desc {
+				font-size: 20px;
+				line-height: 1.5;
+				font-weight: 400;
+				color: #222;
+			}
+
+			.title_text {
+				font-size: 15px;
+				font-weight: normal;
+				line-height: 1.5;
+				color: #666;
+				margin-bottom: 20px;
+			}
+	body
+		table(border="0", cellpadding="0", cellspacing="0", class="body")
+			tr
+				td &nbsp;
+				td.container
+					div.content
+						h1.title.
+							Бриф на разработку сайта.
+						table.main
+							tr
+								td.wrapper
+									table(border="0", cellpadding="0", cellspacing="0")
+										tr
+											td
+												p.title_desc.
+													Пожалуйста, заполните бриф максимально подробно. Это позволит нам определить конкретные сроки и стоимость разработки.
+												p.title_text.
+													Распечатайте бриф. Срок оценки брифа 2-3 рабочих дня.
+												table(border="0" cellpadding="0" cellspacing="0" class="forms")
+													tbody
+														tr
+															td
+																h5.title_desc Сфера деятельности компании:
+																p(name="description")
+														tr
+															td
+																h5.title_desc Характеристики основных услуг:
+																p(name="shareholders")
+														tr
+															td
+																h5.title_desc География реализация товаров, услуг:
+																p(name="geography")
+														tr
+															td
+																h5.title_desc Кто является основным потребителем (целевая аудитория сайта):
+																p(name="auditoria")
+														tr
+															td
+																h5.title_desc Конкуренты, их веб-ресурсы:
+																p(name="konkurenti")
+														tr
+															td
+																h5.title_desc Задачи, которые должен решать сайт:
+																p(name="task")
+														tr
+															td
+																h5.title_desc Тип сайта:
+																p(name="selectedType") Или name = "typeAnother"
+														tr
+															td
+																h5.title_desc Основные разделы сайта (описать точную структуру разделов сайта):
+																p(name="selectedChapter") Или name = "chapterAnother"
+														tr
+															td
+																h5.title_desc Частота предполагаемых обновлений сайта:
+																p(name="siblings")
+														tr
+															td
+																h5.title_desc Языковые версии сайта:
+																p(name="selectedLanguage")
+														tr
+															td
+																h5.title_desc Контент сайта (На примере сайта для публикации новостей. На сайте будут новости, которые будут состоять из заголовка и описания)
+																p(name="content")
+														tr
+															td
+																h5.title_desc Стиль сайта:
+																p(name="style") Или name = "styleAnother"
+														tr
+															td
+																h5.title_desc Впечатление, которое должен произвести сайт на пользователя:
+																p(name="impression")
+														tr
+															td
+																h5.title_desc Какое основное сообщение необходимо довести до сознания потребителя (призыв к действию):
+																p(name="actionCall")
+														tr
+															td
+																h5.title_desc Что вы хотите, чтобы пользователь в результате посещения сайта
+																p(name="see") Увидел:
+																p(name="do") Сделал:
+																p(name="feel") Почувствовал:
+														tr
+															td
+																h5.title_desc Цветовая гамма (Не нужно заполнять, если есть брендбук)
+																p(name="color")
+														tr
+															td
+																h5.title_desc Компоненты сайта:
+																p(name="selectedComponent") Или name = "componentAnother"
+														tr
+															td
+																h5.title_desc Предусматривать ли место под баннерную рекламу:
+																p(name="bannerSelection")
+														tr
+															td
+																h5.title_desc Предусматривать ли место для счетчиков посещений:
+																p(name="counterSelection")
+														tr
+															td
+																h5.title_desc Срок исполнения заказа (сколько готов ждать заказчик):
+																p(name="deadlineSelection")
+														tr
+															td
+																h5.title_desc Пользовательский сценарий:
+																p.title_text (Описать шаги, как посетители  будут взаимодействовать с приложением) Чем больше сценарий, тем лучше мы поймем видение клиента. 
+																p.title_text Ваш сценарий:
+																p(name="scene")
+												h5.title_desc.
+													Это ваш бриф на разработку сайта
+									.footer
+										table(border="0", cellpadding="0", cellspacing="0")
+											tr
+												td.content-block
+													span.apple-link Компания Namba Soft. 
+											tr
+												td.content-block
+												span.apple-link Вам не нравятся такие письма? &nbsp;
+													a(href="https://media.giphy.com/media/3oEjI798qgG6UMhJm0/giphy.gif") Отписаться
+											tr
+												td.content-block.powered-by 
+													span.apple-link Powered by &nbsp;
+													a(href="http://htmlemail.io") HTMLemail.
+								td &nbsp;
+
+
+														
+
